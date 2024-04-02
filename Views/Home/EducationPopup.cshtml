@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewData["Title"] = "EducationPopup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <div class=".bg-img2">
+        <img src="~/img/background-2.png" />
+        <div class="fade modal-backdrop show"></div>
+        <div id="myForm">
+            <div role="dialog"
+                 aria-modal="true"
+                 class="fade modal show"
+                 tabindex="-1"
+                 style="display: block; padding-left: 19px">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title h4">Education</div>
+                    <a asp-action="Index">
+                        <svg stroke="currentColor"
+                             fill="currentColor"
+                             stroke-width="0"
+                             viewBox="0 0 24 24"
+                             class="rounded edit"
+                             height="30"
+                             width="30"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <form novalidate="" class="">
+                        <div class="mb-3">
+                            <label class="form-label">School / College</label><input required=""
+                                                                                     name="institute"
+                                                                                     placeholder="Ex: Government Engineering College"
+                                                                                     type="text"
+                                                                                     class="form-control form-control-sm"
+                                                                                     value="" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Degree</label><input required=""
+                                                                           name="degree"
+                                                                           placeholder="Ex: Bachelor of Engineering"
+                                                                           type="text"
+                                                                           class="form-control form-control-sm"
+                                                                           value="" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Field of study</label><input required=""
+                                                                                   name="fieldOfStudy"
+                                                                                   placeholder="Ex: Computer Engineering"
+                                                                                   type="text"
+                                                                                   class="form-control form-control-sm"
+                                                                                   value="" />
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <label class="form-label">Start - Year</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <select title="" name="startYear" class="form-select">
+                                                <option value="">Year</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                                <option value="2030">2030</option>
+                                                <option value="2031">2031</option>
+                                                <option value="2032">2032</option>
+                                                <option value="2033">2033</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row">
+                                                <label class="form-label">End - Year</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <select title="" name="endYear" class="form-select">
+                                                        <option value="">Year</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                        <option value="2022">2022</option>
+                                                        <option value="2023">2023</option>
+                                                        <option value="2024">2024</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2026">2026</option>
+                                                        <option value="2027">2027</option>
+                                                        <option value="2028">2028</option>
+                                                        <option value="2029">2029</option>
+                                                        <option value="2030">2030</option>
+                                                        <option value="2031">2031</option>
+                                                        <option value="2032">2032</option>
+                                                        <option value="2033">2033</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Grade</label><input required=""
+                                                                          name="grade"
+                                                                          placeholder="Ex: 8.5/10 CGPA"
+                                                                          type="text"
+                                                                          class="form-control form-control-sm"
+                                                                          value="" />
+                        </div>
+                        <button type="submit" class="rounded edit px-2">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "SkillsPopup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <div class=".bg-img2">
+        <img src="~/img/background-2.png" />
+        <div class="fade modal-backdrop show"></div>
+        <div id="myForm">
+            <div role="dialog"
+                 aria-modal="true"
+                 class="fade modal show"
+                 tabindex="-1"
+                 style="display: block; padding-left: 19px">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title h4">Skills</div>
+                            <a asp-action="Index">
+                                <svg stroke="currentColor"
+                                     fill="currentColor"
+                                     stroke-width="0"
+                                     viewBox="0 0 24 24"
+                                     class="rounded edit"
+                                     height="30"
+                                     width="30"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <form novalidate="" class="d-flex align-item-start mb-2">
+                                <div class="">
+                                    <input required=""
+                                           placeholder="Enter Skill"
+                                           type="text"
+                                           class="form-control form-control-sm"
+                                           value="" />
+                                </div>
+                                <button type="submit" class="rounded edit m-0 mx-2">Add Skill</button>
+                            </form>
+                            <hr />
+                            <div class="d-flex flex-wrap"></div>
+                        </div>
+                    </div>
+                </div>

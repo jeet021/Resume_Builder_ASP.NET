@@ -1,0 +1,19 @@
+﻿@model FeedbackModel
+
+@{
+    ViewData["Title"] = "Feedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/style.css" />
+<div class="app">
+    <h1>Feedback Form</h1>
+    <form asp-controller="Feedback" asp-action="SubmitFeedback" method="post">
+        <label>Name:<input type="text" name="Name" required="" value="@Model.Name" /></label>
+        <label>Phone:<input type="text" name="Phone" required="" value="@Model.Phone" /></label>
+        <label>App usage:<textarea name="AppUsage" required="">@Model.AppUsage</textarea></label>
+        <label>App features:<textarea name="AppFeatures" required="">@Model.AppFeatures</textarea></label>
+        <label>App improvement:<textarea name="AppImprovement" required="">@Model.AppImprovement</textarea></label>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>

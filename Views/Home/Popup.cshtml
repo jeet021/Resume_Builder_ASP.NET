@@ -1,0 +1,116 @@
+﻿@model Resume_Builder.Models.UserDetails
+@{
+    ViewData["Title"] = "Popup";
+    // Layout = null;
+}
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <div class=".bg-img2">
+        <img src="~/img/background-2.png" />
+    <div class="fade modal-backdrop show"></div>
+    <div id="myForm">
+        <div role="dialog"
+             aria-modal="true"
+             class="fade modal show"
+             tabindex="-1"
+             style="display: block; padding-left: 19px">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <div class="modal-title h4">Profile Details</div>
+                        <a asp-action="Index"><svg 
+                             stroke="currentColor"
+                             fill="currentColor"
+                             stroke-width="0"
+                             viewBox="0 0 24 24"
+                             class="rounded edit"
+                             height="30"
+                             width="30"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <form class="" method="post" asp-controller="Home" asp-action="Popup">
+
+                    <div class="modal-body">
+                            <div class="mb-3">
+                                <input name="name"
+                                       placeholder="Your Name"
+                                       type="text"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="Name"/>
+                            </div>
+                            <div class="mb-3">
+                                <input name="City"
+                                       placeholder="Your City"
+                                       type="text"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="City" />
+                            </div>
+                            <div class="mb-3">
+                                <input name="position"
+                                       placeholder="Your Position"
+                                       type="text"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="Position"/>
+                            </div>
+                            <div class="mb-3">
+                                <input name="Describe"
+                                       placeholder="Your Describe"
+                                       type="text"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="Describe" />
+                            </div>
+                            <div class="mb-3">
+                                <input name="email"
+                                       placeholder="Email Address"
+                                       type="email"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="Email"/>
+                            </div>
+                            <div class="mb-3">
+                                <input name="contact"
+                                       placeholder="Contact Number"
+                                       type="number"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for= "Contact" />
+                            </div>
+                            <div class="mb-3">
+                                <input name="name"
+                                       placeholder="Your Name"
+                                       type="text"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="Git" />
+                            </div>
+                            <div class="mb-3">
+                                <input name="linkedin"
+                                       placeholder="LinkedIn Profile"
+                                       type="text"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="LinkedIn" />
+                            </div>
+                            <div class="mb-3">
+                                <input name="WebLink"
+                                       placeholder="WebLink"
+                                       type="text"
+                                       class="form-control form-control-sm"
+                                       value="" asp-for="WebLink" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="formFileSm">Profile Picture</label><input type="file"
+                                                                                                         id="formFileSm"
+                                                                                                         class="form-control form-control-sm" asp-for="Picture" />
+                            </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="rounded edit px-2">Save Changes</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

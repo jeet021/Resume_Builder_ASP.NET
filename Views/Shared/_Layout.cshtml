@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Resume_Builder</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/css/style.css" rel="stylesheet" asp-append-version="true"  />
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="path/to/jspdf.umd.min.js"></script>
+    
+
+
+
+</head>
+<body>
+    <header>
+        <nav class="border-bottom navbar navbar-expand navbar-light bg-light sticky-top">
+            <div class="container">
+                <span class="navbar-brand">
+                    <a class="text-decoration-none text-black active"
+                       asp-controller="Home" asp-action="Index"
+                       aria-current="page">Resume Builder</a>
+                </span>
+                <div class="me-auto navbar-nav">
+                  <a class="mx-2 text-decoration-none text-black active" asp-controller="Home" asp-action="Index"aria-current="page">Home</a>
+                  <a class="mx-2 text-decoration-none text-black" asp-controller="About" asp-action="Index">About</a>
+                    <a class="mx-2 text-decoration-none text-black" asp-controller="Contact" asp-action="Index">ContactUs</a>
+                    <a class="mx-2 text-decoration-none text-black" asp-controller="Feedback" asp-action="Index">Feedback</a>
+                </div>
+                @if (!string.IsNullOrEmpty(Context.Session.GetString("Email1")))
+                {
+                    <form method="post" asp-controller="Login" asp-action="Logout">
+                        <button type="submit" class="btn btn-link">Logout</button>
+                    </form>
+                }
+                else
+                {
+                    
+                }
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Resume_Builder - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
